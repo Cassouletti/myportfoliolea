@@ -22,4 +22,4 @@ Création de graphiques et de tableaux de bord pour illustrer les tendances de v
 Proposition de stratégies d'optimisation basées sur les données analysées, telles que des ajustements de promotions ou de répartition de produits.
 
 ## Observations et Résultats
-Les résultats de cette analyse ont permis de dégager plusieurs pistes d'amélioration, que vous pouvez découvrir plus en détail dans le PowerPoint associé ou en consultant le rapport à l'adresse suivante : [Lien vers le rapport].
+Les résultats de cette analyse ont permis de dégager plusieurs pistes d'amélioration, que vous pouvez découvrir plus en détail dans le PowerPoint associé ou en consultant le rapport à l'adresse suivante : https://cassouletti.github.io/portfolioo/excel.html.
