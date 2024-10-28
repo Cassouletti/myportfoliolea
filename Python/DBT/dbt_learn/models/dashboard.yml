@@ -1,0 +1,17 @@
+version: 2
+
+exposures:
+  - name: executive_dashboard
+    label: Executive Dashboard
+    type: dashboard
+    maturity: low
+    url: https://28e6ebe4.us2a.app.preset.io/superset/dashboard/8/?native_filters_key=bSMxW_xcw4YMZL50w_0VNJTJyrOsKHwp22J7LIzsP7ecgm8EW_RYLOi7MWKex2ik
+    description: Executive Dashboard about Airbnb listings and hosts
+
+    depends_on:
+      - ref('dim_listings_w_hosts')
+      - ref('mart_fullmoon_reviews')
+
+    owner:
+      name: Léa Bensoussan
+      email: bensoussanleaai@gmail.com
