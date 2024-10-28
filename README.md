@@ -13,6 +13,8 @@ Nettoyage, exploration, et visualisation de données, avec notamment un projet d
 ## Projet de soutenance : 
 Cosmétiques et substances chimiques : Analyse approfondie des ingrédients présents dans les produits cosmétiques, avec un focus sur la toxicité potentielle des substances (DOPD) et leur impact sur la santé humaine.
 Dans chacun de ces projets, j'ai pris soin d'expliciter les résultats de manière claire et accessible, afin que chaque acteur impliqué puisse comprendre les conclusions et agir en conséquence.
+## Projet Airbnb avec DBT Snowflake et Present:
+Ce projet simule la vie d'un Analytics Engineer chez Airbnb en utilisant le jeu de données Inside Airbnb: Berlin. L'objectif est de charger, nettoyer et exposer les données tout en utilisant plusieurs fonctionnalités de dbt (data build tool). Snowflake est utilisé comme entrepôt de données.
 
 # Parcours académique
 Avant cette formation, j'ai obtenu un diplôme d'ingénieur en Data Analyse à l'ESIEA en 2021, où j'ai développé une solide base théorique et pratique en analyse de données, machine learning, et gestion de bases de données à grande échelle.
