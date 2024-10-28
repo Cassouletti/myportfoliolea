@@ -1,0 +1,316 @@
+[0m11:51:16.123118 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111ff8e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111ff7c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11201fa50>]}
+
+
+============================== 11:51:16.131094 | 7d766e4a-31e1-427f-983c-6ad403d86474 ==============================
+[0m11:51:16.131094 [info ] [MainThread]: Running with dbt=1.8.0
+[0m11:51:16.131923 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': '/Users/alelia/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt init', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:51:16.147143 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'PosixPath'.. Dictionary: {'dir': PosixPath('/Users/alelia/.dbt')}
+[0m11:51:16.149300 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m11:51:35.513499 [debug] [MainThread]: Starter project path: /Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/include/starter_project
+[0m11:51:35.536836 [info ] [MainThread]: 
+Your new dbt project "oms_dbt_proj" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:51:35.539134 [info ] [MainThread]: Setting up your profile.
+[0m17:49:06.865146 [error] [MainThread]: Encountered an error:
+
+[0m17:49:06.964386 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/cli/main.py", line 469, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/task/init.py", line 347, in run
+    self.setup_profile(profile_name)
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/task/init.py", line 263, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/task/init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/task/init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/task/init.py", line 117, in generate_target_from_input
+    target = self.generate_target_from_input(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/task/init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m17:49:07.115255 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 8096.767, "process_user_time": 3.064718, "process_kernel_time": 1.793611, "process_mem_max_rss": "163762176", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:49:07.124136 [debug] [MainThread]: Command `dbt init` failed at 17:49:07.122846 after 8096.83 seconds
+[0m17:49:07.131857 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111fadad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11201f190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11290c990>]}
+[0m17:49:07.136631 [debug] [MainThread]: Flushing usage events
+[0m17:49:14.170086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f96f450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f98ee50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f98f5d0>]}
+
+
+============================== 17:49:14.179827 | 02543ec6-2210-4441-8c6b-207ee6f508f4 ==============================
+[0m17:49:14.179827 [info ] [MainThread]: Running with dbt=1.8.0
+[0m17:49:14.180901 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/Users/alelia/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:49:41.101172 [info ] [MainThread]: A project called oms_dbt_proj already exists here.
+[0m17:49:41.149873 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 27.132864, "process_user_time": 1.845702, "process_kernel_time": 0.375855, "process_mem_max_rss": "88748032", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:49:41.154096 [debug] [MainThread]: Command `dbt init` succeeded at 17:49:41.153230 after 27.14 seconds
+[0m17:49:41.156045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f91d750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f99f510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f99f190>]}
+[0m17:49:41.157490 [debug] [MainThread]: Flushing usage events
+[0m17:49:48.854908 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1101fa990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11021e310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11021ead0>]}
+
+
+============================== 17:49:48.865337 | 82556e7b-20d5-4f50-8f22-7b831e995b8d ==============================
+[0m17:49:48.865337 [info ] [MainThread]: Running with dbt=1.8.0
+[0m17:49:48.866233 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/alelia/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
+[0m17:49:54.301071 [debug] [MainThread]: Starter project path: /Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/include/starter_project
+[0m17:49:54.400704 [info ] [MainThread]: 
+Your new dbt project "projet" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:49:54.402836 [info ] [MainThread]: Setting up your profile.
+[0m17:55:13.456995 [error] [MainThread]: Encountered an error:
+
+[0m17:55:13.533812 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/cli/main.py", line 469, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/task/init.py", line 347, in run
+    self.setup_profile(profile_name)
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/task/init.py", line 263, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/task/init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/task/init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/task/init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alelia/anaconda3/lib/python3.11/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m17:55:13.589892 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 324.83368, "process_user_time": 3.047025, "process_kernel_time": 1.614078, "process_mem_max_rss": "149409792", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:55:13.597658 [debug] [MainThread]: Command `dbt init` failed at 17:55:13.596342 after 324.85 seconds
+[0m17:55:13.604623 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1101ad890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1101fa990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1360cd890>]}
+[0m17:55:13.610166 [debug] [MainThread]: Flushing usage events
+[0m17:55:17.967219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111df8f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111e0a8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111e0b090>]}
+
+
+============================== 17:55:17.975418 | 1394d14e-d4c1-4d78-b5ad-e87b78d079d2 ==============================
+[0m17:55:17.975418 [info ] [MainThread]: Running with dbt=1.8.0
+[0m17:55:17.976214 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': '/Users/alelia/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt init', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:55:24.639978 [debug] [MainThread]: Starter project path: /Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/include/starter_project
+[0m17:55:24.655832 [info ] [MainThread]: 
+Your new dbt project "dbt_projet" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:55:24.656661 [info ] [MainThread]: Setting up your profile.
+[0m18:08:03.819139 [info ] [MainThread]: Profile dbt_projet written to /Users/alelia/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m18:08:03.919606 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 766.0564, "process_user_time": 2.833674, "process_kernel_time": 1.563721, "process_mem_max_rss": "161853440", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:08:03.928765 [debug] [MainThread]: Command `dbt init` succeeded at 18:08:03.926245 after 766.08 seconds
+[0m18:08:03.938964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111e2ed50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x134367f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111e0ae90>]}
+[0m18:08:03.945656 [debug] [MainThread]: Flushing usage events
+[0m12:31:46.176144 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dfe9450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e022850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e023510>]}
+
+
+============================== 12:31:46.183238 | 430abe0a-135c-4054-8361-82fcf7dba73f ==============================
+[0m12:31:46.183238 [info ] [MainThread]: Running with dbt=1.8.0
+[0m12:31:46.184050 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/alelia/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt init dbtlearn', 'send_anonymous_usage_stats': 'True'}
+[0m12:31:46.204062 [debug] [MainThread]: Starter project path: /Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/include/starter_project
+[0m12:31:46.215173 [info ] [MainThread]: 
+Your new dbt project "dbtlearn" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:31:46.216188 [info ] [MainThread]: Setting up your profile.
+[0m12:36:55.320254 [info ] [MainThread]: Profile dbtlearn written to /Users/alelia/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:36:55.460819 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 309.42282, "process_user_time": 3.030663, "process_kernel_time": 2.201359, "process_mem_max_rss": "162103296", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:36:55.466975 [debug] [MainThread]: Command `dbt init` succeeded at 12:36:55.463637 after 309.43 seconds
+[0m12:36:55.470726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dfb17d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dffbb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd91810>]}
+[0m12:36:55.474812 [debug] [MainThread]: Flushing usage events
+[0m12:37:52.983473 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11021cad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110261c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110287810>]}
+
+
+============================== 12:37:52.992948 | 45e45e17-a5b7-4b6a-ab3e-66c47ef8a263 ==============================
+[0m12:37:52.992948 [info ] [MainThread]: Running with dbt=1.8.0
+[0m12:37:52.993981 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/Users/alelia/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m12:37:53.013571 [info ] [MainThread]: dbt version: 1.8.0
+[0m12:37:53.014214 [info ] [MainThread]: python version: 3.11.3
+[0m12:37:53.014650 [info ] [MainThread]: python path: /Users/alelia/anaconda3/bin/python
+[0m12:37:53.015029 [info ] [MainThread]: os info: macOS-10.16-x86_64-i386-64bit
+[0m12:37:54.692582 [info ] [MainThread]: Using profiles dir at /Users/alelia/.dbt
+[0m12:37:54.694943 [info ] [MainThread]: Using profiles.yml file at /Users/alelia/.dbt/profiles.yml
+[0m12:37:54.695407 [info ] [MainThread]: Using dbt_project.yml file at /Users/alelia/Desktop/Data/TRY/Github/Python/DBT/dbt_project.yml
+[0m12:37:54.696040 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m12:37:54.699301 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 1.8481545, "process_user_time": 2.957886, "process_kernel_time": 1.879905, "process_mem_max_rss": "170790912", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:37:54.700415 [debug] [MainThread]: Command `dbt debug` failed at 12:37:54.700062 after 1.85 seconds
+[0m12:37:54.700947 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1102605d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1102159d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1372deb10>]}
+[0m12:37:54.701449 [debug] [MainThread]: Flushing usage events
+[0m12:41:49.001034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111f5cd50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110f335d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111fc7450>]}
+
+
+============================== 12:41:49.009217 | c4e9278c-0f78-4fcd-9456-64ea5bd23506 ==============================
+[0m12:41:49.009217 [info ] [MainThread]: Running with dbt=1.8.0
+[0m12:41:49.009995 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/alelia/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init dbtlearn', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:41:49.026692 [info ] [MainThread]: A project called dbtlearn already exists here.
+[0m12:41:49.030769 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.13598083, "process_user_time": 1.490283, "process_kernel_time": 0.630519, "process_mem_max_rss": "94777344", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:41:49.032613 [debug] [MainThread]: Command `dbt init` succeeded at 12:41:49.032044 after 0.14 seconds
+[0m12:41:49.033516 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111fc7290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111f55950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dec38d0>]}
+[0m12:41:49.034651 [debug] [MainThread]: Flushing usage events
+[0m12:42:02.888703 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f520c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f58ab10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f58b7d0>]}
+
+
+============================== 12:42:02.895919 | cf5e1d58-e7d5-4fed-8820-41f84fd19a7f ==============================
+[0m12:42:02.895919 [info ] [MainThread]: Running with dbt=1.8.0
+[0m12:42:02.896723 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/alelia/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt init dbt_learn', 'send_anonymous_usage_stats': 'True'}
+[0m12:42:02.912979 [debug] [MainThread]: Starter project path: /Users/alelia/anaconda3/lib/python3.11/site-packages/dbt/include/starter_project
+[0m12:42:02.926901 [info ] [MainThread]: 
+Your new dbt project "dbt_learn" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:42:02.927547 [info ] [MainThread]: Setting up your profile.
+[0m12:44:11.289050 [info ] [MainThread]: Profile dbt_learn written to /Users/alelia/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:44:11.324531 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 128.53406, "process_user_time": 3.113851, "process_kernel_time": 1.553737, "process_mem_max_rss": "164237312", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:44:11.329323 [debug] [MainThread]: Command `dbt init` succeeded at 12:44:11.326141 after 128.54 seconds
+[0m12:44:11.331385 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f562210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f519850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13655ba10>]}
+[0m12:44:11.332454 [debug] [MainThread]: Flushing usage events
+[0m12:45:51.855532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1114f3410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11151f010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11151fcd0>]}
+
+
+============================== 12:45:51.862242 | 6551019d-b73e-4267-b9d0-c663cdd55100 ==============================
+[0m12:45:51.862242 [info ] [MainThread]: Running with dbt=1.8.0
+[0m12:45:51.863059 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/alelia/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m12:45:51.879493 [info ] [MainThread]: dbt version: 1.8.0
+[0m12:45:51.880090 [info ] [MainThread]: python version: 3.11.3
+[0m12:45:51.880514 [info ] [MainThread]: python path: /Users/alelia/anaconda3/bin/python
+[0m12:45:51.880891 [info ] [MainThread]: os info: macOS-10.16-x86_64-i386-64bit
+[0m12:45:53.709313 [info ] [MainThread]: Using profiles dir at /Users/alelia/.dbt
+[0m12:45:53.709971 [info ] [MainThread]: Using profiles.yml file at /Users/alelia/.dbt/profiles.yml
+[0m12:45:53.710364 [info ] [MainThread]: Using dbt_project.yml file at /Users/alelia/Desktop/Data/TRY/Github/Python/DBT/dbt_project.yml
+[0m12:45:53.711239 [info ] [MainThread]: adapter type: snowflake
+[0m12:45:53.711686 [info ] [MainThread]: adapter version: 1.8.4
+[0m12:45:53.712116 [info ] [MainThread]: Configuration:
+[0m12:45:53.712486 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m12:45:53.712831 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m12:45:53.713159 [info ] [MainThread]: Required dependencies:
+[0m12:45:53.713590 [debug] [MainThread]: Executing "git --help"
+[0m12:45:53.754592 [debug] [MainThread]: STDOUT: "b"usage : git [-v | --version] [-h | --help] [-C <chemin>] [-c <nom>=<valeur>]\n           [--exec-path[=<chemin>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<chemin>] [--work-tree=<chemin>] [--namespace=<nom>]\n           [--config-env=<nom>=<variable-d-environnement>] <commande> [<args>]\n\nCi-dessous les commandes Git habituelles dans diverses situations\xc2\xa0:\n\nd\xc3\xa9marrer une zone de travail (voir aussi\xc2\xa0: git help tutorial)\n   clone     Cloner un d\xc3\xa9p\xc3\xb4t dans un nouveau r\xc3\xa9pertoire\n   init      Cr\xc3\xa9er un d\xc3\xa9p\xc3\xb4t Git vide ou r\xc3\xa9initialiser un existant\n\ntravailler sur la modification actuelle (voir aussi\xc2\xa0: git help revisions)\n   add       Ajouter le contenu de fichiers dans l'index\n   mv        D\xc3\xa9placer ou renommer un fichier, un r\xc3\xa9pertoire, ou un lien symbolique\n   restore   Restaurer les fichiers l'arbre de travail\n   rm        Supprimer des fichiers de la copie de travail et de l'index\n\nexaminer l'historique et l'\xc3\xa9tat (voir aussi\xc2\xa0: git help revisions)\n   bisect    Trouver par recherche binaire la modification qui a introduit un bogue\n   diff      Afficher les changements entre les validations, entre validation et copie de travail, etc\n   grep      Afficher les lignes correspondant \xc3\xa0 un motif\n   log       Afficher l'historique des validations\n   show      Afficher diff\xc3\xa9rents types d'objets\n   status    Afficher l'\xc3\xa9tat de la copie de travail\n\nagrandir, marquer et modifier votre historique\n   branch    Lister, cr\xc3\xa9er ou supprimer des branches\n   commit    Enregistrer les modifications dans le d\xc3\xa9p\xc3\xb4t\n   merge     Fusionner deux ou plusieurs historiques de d\xc3\xa9veloppement ensemble\n   rebase    R\xc3\xa9application des commits sur le sommet de l'autre base\n   reset     R\xc3\xa9initialiser la HEAD courante \xc3\xa0 l'\xc3\xa9tat sp\xc3\xa9cifi\xc3\xa9\n   switch    Basculer de branche\n   tag       Cr\xc3\xa9er, lister, supprimer ou v\xc3\xa9rifier un objet d'\xc3\xa9tiquette sign\xc3\xa9 avec GPG\n\ncollaborer (voir aussi\xc2\xa0: git help workflows)\n   fetch     T\xc3\xa9l\xc3\xa9charger les objets et r\xc3\xa9f\xc3\xa9rences depuis un autre d\xc3\xa9p\xc3\xb4t\n   pull      Rapatrier et int\xc3\xa9grer un autre d\xc3\xa9p\xc3\xb4t ou une branche locale\n   push      Mettre \xc3\xa0 jour les r\xc3\xa9f\xc3\xa9rences distantes ainsi que les objets associ\xc3\xa9s\n\n'git help -a' et 'git help -g' listent les sous-commandes disponibles et\nquelques concepts. Voir 'git help <commande>' ou 'git help <concept>'\npour en lire plus \xc3\xa0 propos d'une commande sp\xc3\xa9cifique ou d'un concept.\nVoir 'git help git' pour un survol du syst\xc3\xa8me.\n""
+[0m12:45:53.756354 [debug] [MainThread]: STDERR: "b''"
+[0m12:45:53.756924 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:45:53.757415 [info ] [MainThread]: Connection:
+[0m12:45:53.757957 [info ] [MainThread]:   account: kifatih-bh67203
+[0m12:45:53.758329 [info ] [MainThread]:   user: leab
+[0m12:45:53.758838 [info ] [MainThread]:   database: AIRBNB
+[0m12:45:53.759384 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m12:45:53.759905 [info ] [MainThread]:   role: transform
+[0m12:45:53.760273 [info ] [MainThread]:   schema: DEV
+[0m12:45:53.760632 [info ] [MainThread]:   authenticator: None
+[0m12:45:53.761010 [info ] [MainThread]:   oauth_client_id: None
+[0m12:45:53.761348 [info ] [MainThread]:   query_tag: None
+[0m12:45:53.761698 [info ] [MainThread]:   client_session_keep_alive: False
+[0m12:45:53.762128 [info ] [MainThread]:   host: None
+[0m12:45:53.762515 [info ] [MainThread]:   port: None
+[0m12:45:53.763063 [info ] [MainThread]:   proxy_host: None
+[0m12:45:53.763516 [info ] [MainThread]:   proxy_port: None
+[0m12:45:53.763867 [info ] [MainThread]:   protocol: None
+[0m12:45:53.764203 [info ] [MainThread]:   connect_retries: 1
+[0m12:45:53.764532 [info ] [MainThread]:   connect_timeout: None
+[0m12:45:53.764856 [info ] [MainThread]:   retry_on_database_errors: False
+[0m12:45:53.765437 [info ] [MainThread]:   retry_all: False
+[0m12:45:53.766585 [info ] [MainThread]:   insecure_mode: False
+[0m12:45:53.767409 [info ] [MainThread]:   reuse_connections: None
+[0m12:45:53.769045 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m12:45:53.858511 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m12:45:53.861329 [debug] [MainThread]: Using snowflake connection "debug"
+[0m12:45:53.861853 [debug] [MainThread]: On debug: select 1 as id
+[0m12:45:53.862279 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:45:54.701344 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.838 seconds
+[0m12:45:54.704124 [debug] [MainThread]: On debug: Close
+[0m12:45:54.778019 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m12:45:54.778730 [info ] [MainThread]: [31m1 check failed:[0m
+[0m12:45:54.779165 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/alelia/Desktop/Data/TRY/Github/Python/DBT/dbt_project.yml> not found
+
+[0m12:45:54.783322 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 3.0313275, "process_user_time": 3.288227, "process_kernel_time": 2.043613, "process_mem_max_rss": "176242688", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:45:54.785004 [debug] [MainThread]: Command `dbt debug` failed at 12:45:54.784654 after 3.03 seconds
+[0m12:45:54.787309 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m12:45:54.788107 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11128db10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1114ad990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1115a99d0>]}
+[0m12:45:54.788871 [debug] [MainThread]: Flushing usage events
